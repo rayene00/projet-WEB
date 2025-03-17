@@ -1,0 +1,205 @@
+/* Importation du CSS global */
+@import url("../css/firstpage.css");
+
+/* Barre de recherche */
+.search-bar-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.search-bar {
+    display: flex;
+    background: white;
+    padding: 12px;
+    border-radius: 30px;
+    gap: 12px;
+    align-items: center;
+    max-width: 600px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input {
+    padding: 12px;
+    border-radius: 25px;
+    border: 1px solid #00274D;
+    outline: none;
+    width: 220px;
+    font-size: 16px;
+    color: #00274D;
+    background: white;
+    text-align: center;
+}
+
+.rechercher {
+    background: #0090C1;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Conteneur du formulaire */
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+}
+
+/* Formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    flex: 1;
+}
+
+/* Groupes spécifiques */
+.prenom-group, .nom-group, .email-group, .telephone-group, 
+.role-group, .entreprise-group, .password-group, .confirm-password-group {
+    margin-bottom: 10px; /* Espacement entre chaque champ */
+}
+
+/* Inputs */
+input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Style des labels */
+.form-group label {
+    color: black;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+/* Placeholders */
+input::placeholder {
+    color: rgba(128, 128, 128, 0.5);
+}
+
+/* Style du groupe "Vous êtes" */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: black;
+    font-weight: normal;
+}
+
+.checkbox-group label {
+    color: black;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* Boutons radio */
+.checkbox-group input[type="radio"] {
+    accent-color: #0090C1;
+    transform: scale(1.2);
+}
+
+/* Case à cocher */
+.terms-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Bouton principal */
+.btn {
+    width: 100%;
+    background: #0090C1;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background: #007ba7;
+}
+
+/* Bouton actif */
+.btn.inscription.active {
+    background: #00274D;
+    color: white;
+}
+
+/* Style du texte "Se connecter" */
+.login-link {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.login-link a {
+    color: #0090C1;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Titres */
+h2, h3 {
+    color: black;
+    font-weight: normal;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+    }
+}
+
+.login-link {
+    color: black;
+    font-weight: normal;
+}
+
+.form-group-terms-group-checkbox-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    color: black;
+}
+
+.form-group-terms-group-checkbox-group div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.form-group-terms-group-checkbox-group .terms-link {
+    margin-left: 25px;
+    color: #0090C1;
+    text-decoration: none;
+}

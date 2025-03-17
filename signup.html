@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRYF - Inscription</title>
+    <link rel="stylesheet" href="../css/signup.css">
+</head>
+<body>
+
+    <!-- HEADER (Identique à firstpage) -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="../assets/images/logo.png" alt="CRYF Logo" class="logo">
+                <span class="brand-name">CRYF</span>
+            </div>
+            <nav>
+                <a href="#" class="access-recruteur">Accès Recruteur ></a>
+                <a href="signup.html" class="btn inscription active">Inscription</a>
+                <a href="signin.html" class="btn connexion">Se connecter</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- FORMULAIRE D'INSCRIPTION -->
+    <div class="container">
+        <h2>Inscription</h2>
+        <br>
+        <form action="#" method="POST">
+            <div class="form-row">
+                <div class="form-group prenom-group">
+                    <label>Prénom *</label>
+                    <input type="text" placeholder="Prénom" required>
+                </div>
+
+                <div class="form-group nom-group">
+                    <label>Nom *</label>
+                    <input type="text" placeholder="Nom" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group email-group">
+                    <label>Adresse courriel *</label>
+                    <input type="email" placeholder="Mail" required>
+                </div>
+
+                <div class="form-group telephone-group">
+                    <label>Téléphone (optionnel)</label>
+                    <input type="tel" placeholder="Téléphone">
+                </div>
+            </div>
+
+            <div class="form-group role-group">
+                <label>Vous êtes *</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="pilote" name="role" required>
+                    <label for="pilote">Pilote</label>
+
+                    <input type="radio" id="etudiant" name="role" required>
+                    <label for="etudiant">Étudiant</label>
+                </div>
+            </div>
+
+            <div class="form-group entreprise-group">
+                <label>Nom de l’entreprise (pilote) *</label>
+                <input type="text" placeholder="Name" required>
+            </div>
+
+            <h3>Sécurité du Compte</h3>
+
+            <div class="form-row">
+                <div class="form-group password-group">
+                    <label>Mot de passe *</label>
+                    <input type="password" placeholder="Password" required>
+                </div>
+
+                <div class="form-group confirm-password-group">
+                    <label>Confirmer le mot de passe *</label>
+                    <input type="password" placeholder="Password" required>
+                </div>
+            </div>
+
+            <div class="form-group-terms-group-checkbox-group">
+                <div>
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">J'accepte les conditions d'utilisateur</label>
+                </div>
+                <a href="#" class="terms-link">Read our T&Cs</a>
+            </div>
+                        
+            <button type="submit" class="btn">Inscription</button>
+
+            <p class="login-link">Déjà enregistré chez nous ? <a href="signin.html">Se connecter</a> ou réinitialiser le mot de passe</p>
+        </form>
+    </div>
+
+    <!-- FOOTER (Identique à firstpage) -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="../assets/images/logo.png" alt="CRYF Logo">
+                <span class="brand-name">CRYF</span>
+            </div>
+
+            <div class="footer-section">
+                <h3>A propos</h3>
+                <ul>
+                    <li><a href="#">Concept</a></li>
+                    <li><a href="#">Qui sommes-nous ?</a></li>
+                    <li><a href="#">Offre de stage</a></li>
+                    <li><a href="#">Avis</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Liens utiles</h3>
+                <ul>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Conditions d’utilisation</a></li>
+                    <li><a href="#">Données personnelles</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-alertes">
+                <h3>Alertes de stages</h3>
+                <p>Les dernières offres de stages envoyées par mail chaque semaine.</p>
+                <div class="newsletter">
+                    <input type="email" placeholder="exemple@xxx.com">
+                    <button class="btn">Inscription</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>2025 @ CRYF. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
