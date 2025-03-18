@@ -114,46 +114,91 @@ input::placeholder {
     cursor: pointer;
 }
 
-/* Boutons radio */
-.checkbox-group input[type="radio"] {
-    accent-color: #0090C1;
-    transform: scale(1.2);
+/* HEADER */
+header {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
-/* Case à cocher */
-.terms-group {
+/* Conteneur principal du header */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    width: 90%; /* Largeur ajustée */
+    max-width: 1370px; /* Réduction de la largeur max */
+    padding: 0px 10px; /* Réduction du padding vertical */
+    border-radius: 20px; /* Réduction de l’arrondi */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Ombre plus fine */
+}
+
+/* Section logo + nom */
+.logo-section {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
-/* Bouton principal */
+.logo {
+    height: 70px; /* Augmente la taille du logo */
+    width: auto;
+}
+
+.brand-name {
+    font-size: 25px; /* Augmente la taille du texte CRYF */
+    font-weight: bold;
+    color: #00274D;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Style du lien Accès Recruteur */
+.access-recruteur {
+    color: #00274D;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 500;
+    padding-right: 15px;
+    border-right: 1px solid #00274D;
+}
+
+/* Boutons */
 .btn {
-    width: 100%;
-    background: #0090C1;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 8px;
-    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 26px;
+    font-size: 16px;
+    font-weight: 500;
     cursor: pointer;
-    margin-top: 15px;
 }
 
-.btn:hover {
-    background: #007ba7;
-}
-
-/* Bouton actif */
-.btn.inscription.active {
+/* Bouton Inscription */
+.inscription {
     background: #00274D;
     color: white;
+    border: none;
 }
 
-/* Style du texte "Se connecter" */
-.login-link {
-    margin-top: 10px;
+/* Bouton Connexion en lien */
+.connexion {
+    display: inline-block; /* Permet de garder l'apparence d'un bouton */
     text-align: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 26px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid #00274D;
+    color: #00274D;
+    background: none;
 }
 
 .login-link a {
@@ -167,10 +212,21 @@ input::placeholder {
 }
 
 /* Titres */
-h2, h3 {
+h2 {
     color: black;
     font-weight: normal;
 }
+
+h3 {
+    color: rgb(255, 255, 255);
+    font-weight: normal;
+}
+
+h4 {
+    color: black;
+    font-weight: normal;
+}
+
 
 /* Responsive */
 @media (max-width: 600px) {
