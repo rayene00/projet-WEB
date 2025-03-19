@@ -1,0 +1,217 @@
+/* Importation du CSS global */
+@import url("../css/firstpage.css");
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg, #0090C1 0%, black 50%, #00274D 100%);
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* HEADER (RESTE NORMAL MAIS BIEN SÉPARÉ) */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+/* Conteneur du header */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    width: 90%;
+    max-width: 1370px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo et marque */
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    height: 70px;
+    width: auto;
+}
+
+.brand-name {
+    font-size: 25px;
+    font-weight: bold;
+    color: #00274D;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Boutons */
+.btn {
+    padding: 10px 20px;
+    border-radius: 26px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Style spécifique des boutons */
+.inscription {
+    background: #00274D;
+    color: white;
+}
+
+.connexion {
+    background: none;
+    border: 1px solid #00274D;
+    color: #00274D;
+}
+
+.connexion.active {
+    background: #00274D;
+    color: white;
+}
+
+/* ESPACEMENT entre le header et le formulaire */
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: black;
+    margin-top: 50px; /* ESPACE ENTRE LE HEADER ET LE FORMULAIRE */
+}
+
+/* Boutons de connexion avec les réseaux sociaux */
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Boutons des réseaux sociaux */
+.google {
+    background: white;
+    color: black;
+    border: 1px solid #ccc;
+}
+
+.facebook {
+    background: #1877f2;
+    color: white;
+}
+
+.linkedin {
+    background: #0077b5;
+    color: white;
+}
+
+/* Séparateur */
+.separator {
+    margin: 20px 0;
+    font-size: 14px;
+    color: #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.separator::before, .separator::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #ccc;
+    margin: 0 10px;
+}
+
+/* Formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Lien "Mot de passe oublié" */
+.forgot-password {
+    text-align: right;
+    font-size: 14px;
+    margin-top: 5px;
+    color: #0077b5;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* reCAPTCHA */
+.recaptcha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.recaptcha img {
+    width: 120px;
+}
+
+/* Bouton Connexion */
+.submit {
+    background: #0090C1;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Lien d'inscription */
+.register-link {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.register-link a {
+    color: #0090C1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}

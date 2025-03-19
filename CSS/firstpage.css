@@ -215,6 +215,7 @@ footer {
 /* Sections du footer (A propos & Liens utiles) */
 .footer-section {
     text-align: left; /* Texte bien aligné à gauche */
+    color: white;
 }
 
 /* Espacement entre les éléments */

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRYF - Connexion</title>
+    <link rel="stylesheet" href="../css/signin.css">
+</head>
+<body>
+
+    <!-- HEADER BIEN SÉPARÉ DU FORMULAIRE -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="../assets/images/logo.png" alt="CRYF Logo" class="logo">
+                <span class="brand-name">CRYF</span>
+            </div>
+            <nav>
+                <a href="signup.html" class="btn inscription">Inscription</a>
+                <a href="signin.html" class="btn connexion">Se connecter</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- FORMULAIRE DE CONNEXION BIEN CENTRÉ ET SÉPARÉ -->
+    <div class="container">
+        <h2>Veuillez vous connecter</h2>
+
+        <!-- Connexion avec les réseaux sociaux -->
+        <div class="social-login">
+            <button class="btn google"><i class="fab fa-google"></i> Se connecter avec Google</button>
+            <button class="btn facebook"><i class="fab fa-facebook-f"></i> Se connecter avec Facebook</button>
+            <button class="btn linkedin"><i class="fab fa-linkedin-in"></i> Se connecter avec LinkedIn</button>
+        </div>
+
+        <div class="separator">Ou connectez-vous avec votre email</div>
+
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" placeholder="exemple@xxx.com" required>
+            </div>
+
+            <div class="form-group">
+                <label>Mot de passe</label>
+                <input type="password" placeholder="Votre mot de passe" required>
+                <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+            </div>
+
+            <!-- reCAPTCHA -->
+            <div class="recaptcha">
+                <input type="checkbox" id="robot">
+                <label for="robot">Je ne suis pas un robot</label>
+                <img src="../assets/images/recaptcha.png" alt="reCAPTCHA">
+            </div>
+
+            <button type="submit" class="btn submit">Connexion</button>
+        </form>
+
+        <p class="register-link">Vous n'avez pas de compte ? <a href="signup.html">Inscrivez-vous</a></p>
+    </div>
+
+</body>
+</html>
