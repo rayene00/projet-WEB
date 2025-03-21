@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CRYF - Connexion</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600&family=Inter:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/signin.css">
 </head>
 <body>
 
-    <!-- HEADER BIEN SÉPARÉ DU FORMULAIRE -->
+    <!-- HEADER -->
     <header>
         <div class="header-container">
             <div class="logo-section">
-                <img src="../assets/images/logo.png" alt="CRYF Logo" class="logo">
+                <a href="firstpage.html">
+                    <img src="../assets/images/logo.png" alt="CRYF Logo" class="logo">
+                </a>
                 <span class="brand-name">CRYF</span>
             </div>
-            <nav>
+                <nav>
                 <a href="signup.html" class="btn inscription">Inscription</a>
                 <a href="signin.html" class="btn connexion">Se connecter</a>
             </nav>
         </div>
     </header>
 
-    <!-- FORMULAIRE DE CONNEXION BIEN CENTRÉ ET SÉPARÉ -->
+    <!-- FORMULAIRE DE CONNEXION -->
     <div class="container">
         <h2>Veuillez vous connecter</h2>
-
-        <!-- Connexion avec les réseaux sociaux -->
-        <div class="social-login">
-            <button class="btn google"><i class="fab fa-google"></i> Se connecter avec Google</button>
-            <button class="btn facebook"><i class="fab fa-facebook-f"></i> Se connecter avec Facebook</button>
-            <button class="btn linkedin"><i class="fab fa-linkedin-in"></i> Se connecter avec LinkedIn</button>
-        </div>
-
-        <div class="separator">Ou connectez-vous avec votre email</div>
 
         <form action="#" method="POST">
             <div class="form-group">
@@ -45,21 +45,51 @@
             <div class="form-group">
                 <label>Mot de passe</label>
                 <input type="password" placeholder="Votre mot de passe" required>
-                <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+                <a href="../HTML/ForgetPassword.html" class="forgot-password">Mot de passe oublié ?</a>
             </div>
 
-            <!-- reCAPTCHA -->
-            <div class="recaptcha">
-                <input type="checkbox" id="robot">
-                <label for="robot">Je ne suis pas un robot</label>
-                <img src="../assets/images/recaptcha.png" alt="reCAPTCHA">
+            <!-- RECAPTCHA FAKE -->
+            <div class="recaptcha" id="recaptcha-box">
+                <div class="checkbox-area" id="checkbox-area">
+                    <div class="spinner hidden" id="spinner"></div>
+                    <i class="fa-solid fa-check check-icon hidden" id="check-icon"></i>
+                </div>
+                <span>I’m not a robot</span>
             </div>
 
             <button type="submit" class="btn submit">Connexion</button>
         </form>
 
-        <p class="register-link">Vous n'avez pas de compte ? <a href="signup.html">Inscrivez-vous</a></p>
+        <p class="register-link">
+            Vous n’avez pas de compte ? <a href="signup.html">Inscrivez-vous</a>
+        </p>
     </div>
 
+    <!-- SCRIPT POUR ANIMATION -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const checkboxArea = document.getElementById('checkbox-area');
+            const spinner = document.getElementById('spinner');
+            const checkIcon = document.getElementById('check-icon');
+            const submitBtn = document.querySelector('.submit');
+
+            let validated = false;
+
+            submitBtn.disabled = true;
+
+            checkboxArea.addEventListener('click', () => {
+                if (validated) return;
+
+                spinner.classList.remove('hidden');
+
+                setTimeout(() => {
+                    spinner.classList.add('hidden');
+                    checkIcon.classList.remove('hidden');
+                    validated = true;
+                    submitBtn.disabled = false;
+                }, 1500);
+            });
+        });
+    </script>
 </body>
 </html>
