@@ -1,58 +1,67 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRYF</title>
-    <link rel="stylesheet" href="../CSS/quisommesnous.css">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../CSS/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@600&family=Epilogue:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- HEADER (superposé sur les images) -->
-      <!-- HEADER -->
-      <header>
-        <div class="header-container">
-            <div class="logo-section">
-                <a href="firstpage.html">
+
+    <div class="hero-wrapper">
+        <div class="hero-background"></div>
+    
+        <header>
+            <div class="header-container">
+                <div class="logo-section">
                     <img src="../assets/images/logo.png" alt="CRYF Logo" class="logo">
                     <span class="brand-name">CRYF</span>
-                </a>
+                </div>
+                <nav>
+                    <a href="#" class="recruteur-link">Accès Recruteur</a>
+                    <a href="signup.html" class="btn inscription">Inscription</a>
+                    <a href="signin.html" class="btn connexion">Se connecter</a>
+                </nav>
             </div>
-            <nav>
-                <a href="signup.html" class="btn inscription">Inscription</a>
-                <a href="signin.html" class="btn connexion">Se connecter</a>
-            </nav>
-        </div>
-    </header>
+        </header>
+    
+        <section class="hero">
+            <h1><span class="highlight">Contacter</span> nous</h1>
+        </section>
+    </div>
 
-    <!-- SECTION IMAGES PLEINE LARGEUR AVEC FLOU -->
-    <section class="full-width-images">
-        <div class="image-container">
-            <img src="../assets/images/1er_Qui_sommes_nous.png" alt="Image 1" class="full-width-image">
-            <div class="image-overlay"></div>
-            <div class="image-content">
-                <h2 class="title-underline">Qui sommes nous !</h2>
-            </div>
+    <!-- ✅ PARTIE 2 : Contact + Formulaire -->
+    <section class="contact-section">
+        <div class="contact-left">
+            <p>
+                Pour toute question ou information supplémentaire,<br>
+                veuillez remplir le formulaire ci-dessous.<br><br>
+                Nous vous répondrons dans les plus brefs délais.<br><br>
+                Vous pouvez directement nous contacter au :<br>
+                <span class="phone-number">04 56 78 90 12</span>
+            </p>
         </div>
-        
-        <div class="image-container">
-            <img src="../assets/images/2eme_Qui_sommes_nous.png" alt="Image 2" class="full-width-image">
-            <div class="image-overlay"></div>
-            <div class="image-content">
-                <p class="larger-text">Notre objectif est de simplifier la recherche de stage pour les étudiants en leur offrant une plateforme intuitive et centralisée, permettant aux entreprises de publier leurs offres de stage et aux étudiants de postuler facilement.</p>
-            </div>
-        </div>
-        
-        <div class="image-container">
-            <img src="../assets/images/3eme_Qui_sommes_nous.png" alt="Image 3" class="full-width-image">
-            <div class="image-overlay"></div>
-            <div class="image-content">
-                <p class="larger-text">Chez CRYF, nous nous engageons à fournir une interface moderne et responsive, permettant une recherche d'offres de stage fluide et efficace. Notre plateforme vise à offrir une expérience sécurisée et conforme aux normes légales, tout en respectant la confidentialité des données des utilisateurs.</p>
-            </div>
+
+        <div class="contact-right">
+            <form>
+                <div class="form-row">
+                    <input type="text" placeholder="Prénom" required>
+                    <input type="text" placeholder="Nom" required>
+                </div>
+                <div class="form-row">
+                    <input type="email" placeholder="Email" required>
+                    <input type="tel" placeholder="Téléphone" required>
+                </div>
+                <div class="form-row full">
+                    <textarea placeholder="Messages" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Envoyer</button>
+            </form>
         </div>
     </section>
 
-    <!-- FOOTER (Identique à celui fourni) -->
+    <!-- Footer -->
     <footer>
         <div class="footer-container">
             <!-- Logo et nom -->
@@ -103,5 +112,6 @@
             </div>
         </div>
     </footer>
+
 </body>
 </html>

@@ -1,3 +1,6 @@
+/* Importation du CSS global */
+@import url("../css/firstpage.css");
+
 /* Variables */
 :root {
     --text-primary: #1E1E1E;
@@ -243,4 +246,61 @@ input::placeholder {
 
 .register-link a:hover {
     text-decoration: underline;
+}
+
+/* FOOTER - FIXED & FULL WIDTH */
+footer {
+    background: linear-gradient(90deg, #00274D 0%, black 50%, #0090C1 100%);
+    color: white;
+    width: 100%;
+    margin-top: auto; /* Pousse le footer en bas */
+    padding: 50px 5% !important; /* Réduit le padding latéral */
+}
+
+.footer-container {
+    max-width: 1370px; /* Match avec le header */
+    margin: 0 auto; /* Centre le contenu */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Sections du footer */
+.footer-section, .footer-alertes {
+    flex: 1;
+    min-width: 200px; /* Évite le squeeze */
+}
+
+/* Newsletter responsive */
+.newsletter {
+    flex-direction: column;
+}
+.newsletter input, .newsletter .btn {
+    width: 100% !important;
+}
+
+/* Footer bottom */
+.footer-bottom {
+    width: 100%;
+    max-width: 1370px;
+    margin: 30px auto 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-section, .footer-alertes {
+        text-align: center !important;
+    }
+    .footer-logo {
+        justify-content: center;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
