@@ -1,0 +1,160 @@
+.offres-wrapper {
+    background: white;
+    padding: 60px 5%;
+}
+
+.offres-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* FILTRES */
+.filtres {
+    background: #F5F8FF;
+    border-radius: 20px;
+    padding: 30px;
+    width: 280px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    color: #25324B;
+}
+
+.filtre-bloc {
+    margin-bottom: 30px;
+}
+
+.filtre-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.filtres label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    color: #515B6F;
+    margin-bottom: 12px;
+}
+
+/* LISTE DES OFFRES */
+.liste-offres {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.offre {
+    background: #F0F4FA;
+    padding: 25px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.08);
+}
+
+.offre img {
+    height: 60px;
+    width: auto;
+}
+
+.offre-details {
+    flex: 1;
+}
+
+.offre-details h2 {
+    font-size: 20px;
+    color: #25324B;
+}
+
+.offre-details p {
+    color: #515B6F;
+    margin: 5px 0;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.tag {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.green { background: rgba(86, 205, 173, 0.1); color: #56CDAD; }
+.yellow { background: rgba(255, 184, 54, 0.1); color: #FFB836; }
+.purple { background: rgba(70, 64, 222, 0.1); color: #4640DE; }
+
+.postuler {
+    background: #00274D;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.postuler:hover {
+    background: #003366;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #25324B;
+    font-weight: 400;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #D6DDEB;
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background: white;
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked {
+    background-color: #00274D;
+    border-color: #00274D;
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked::after {
+    content: '✓';
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -53%);
+}
+
+.filtre-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #25324B;
+}
