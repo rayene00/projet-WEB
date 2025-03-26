@@ -1,0 +1,381 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Epilogue', sans-serif;
+}
+
+/* Background fix */
+body {
+    background: linear-gradient(90deg, #0090C1 0%, black 50%, #00274D 100%);
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Conteneur principal du header */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    width: 90%; /* Largeur ajustée */
+    max-width: 1370px; /* Réduction de la largeur max */
+    padding: 0px 10px; /* Réduction du padding vertical */
+    border-radius: 20px; /* Réduction de l’arrondi */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Ombre plus fine */
+}
+
+/* Section logo + nom */
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    height: 70px; /* Augmente la taille du logo */
+    width: auto;
+}
+
+.brand-name {
+    font-size: 25px; /* Augmente la taille du texte CRYF */
+    font-weight: bold;
+    color: #00274D;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Style du lien Accès Recruteur */
+.access-recruteur {
+    color: #00274D;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 500;
+    padding-right: 15px;
+    border-right: 1px solid #00274D;
+}
+
+/* Boutons */
+.btn {
+    padding: 10px 20px;
+    border-radius: 26px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Bouton Inscription */
+.inscription {
+    background: #00274D;
+    color: white;
+    border: none;
+}
+
+/* Bouton Connexion en lien */
+.connexion {
+    display: inline-block; /* Permet de garder l'apparence d'un bouton */
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 26px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid #00274D;
+    color: #00274D;
+    background: none;
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    max-width: 800px;
+}
+
+.highlight {
+    color: #0090C1;
+    text-decoration: underline;
+}
+
+/* SEARCH BAR */
+.search-bar {
+    display: flex;
+    background: white;
+    padding: 15px;
+    border-radius: 30px;
+    gap: 12px;
+}
+
+.search-input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    border: 1px solid #00274D;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+.search-input input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #00274D;
+    background: none;
+}
+
+.rechercher {
+    background: #0090C1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* PARTENAIRES */
+.partenaires {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px; /* Espacement entre les logos */
+    flex-wrap: wrap;
+}
+
+.logos img {
+    height: 120px;
+    width: auto;
+    max-width: 220px;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logos img:hover {
+    transform: scale(1.1);
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(90deg, #00274D 0%, black 50%, #0090C1 100%);
+    padding: 50px 10%;
+    color: white;
+}
+
+/* Conteneur principal du footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Conteneur pour aligner les sections à gauche */
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px; /* Espacement entre les blocs */
+}
+
+/* Sections du footer (A propos & Liens utiles) */
+.footer-section {
+    text-align: left; /* Texte bien aligné à gauche */
+    color: white;
+}
+
+/* Espacement entre les éléments */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+}
+
+/* Alertes de stages reste à droite */
+.footer-alertes {
+    text-align: left;
+    max-width: 300px;
+}
+
+/* Style du logo */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo img {
+    height: 80px; /* Augmente la taille du logo */
+    width: auto;
+}
+
+.footer-logo .brand-name {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Sections du footer */
+.footer-section h3,
+.footer-alertes h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px; /* Ajoute plus d’espace entre les éléments */
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+}
+
+/* Newsletter */
+.newsletter {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.newsletter input {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 200px;
+}
+
+/* Bouton Inscription */
+.newsletter .btn {
+    background: #00274D;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Ligne de séparation et copyright */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 20px;
+    margin-top: 30px;
+}
+
+/* Icônes des réseaux sociaux */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .footer-section,
+    .footer-alertes {
+        margin-top: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* SEARCH BAR */
+.search-bar {
+    display: flex;
+    background: white;
+    padding: 15px;
+    border-radius: 30px;
+    gap: 12px;
+    align-items: center;
+}
+
+/* Style des inputs */
+.search-bar input {
+    padding: 12px;
+    border-radius: 25px; /* Rend les bords bien arrondis */
+    border: 1px solid #00274D;
+    outline: none;
+    width: 200px;
+    font-size: 16px;
+    color: #00274D;
+    background: white;
+    text-align: center;
+}
+
+/* Style du bouton Rechercher */
+.rechercher {
+    background: #0090C1;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px; /* Arrondi le bouton aussi */
+    font-size: 16px;
+    cursor: pointer;
+}

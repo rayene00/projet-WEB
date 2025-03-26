@@ -29,7 +29,7 @@
     <div class="container">
         <h2>Inscription</h2>
         <br>
-        <form action="#" method="POST">
+        <form action="aprèsco.html" method="GET">
             <div class="form-row">
                 <div class="form-group prenom-group">
                     <label>Prénom *</label>
@@ -65,9 +65,9 @@
                 </div>
             </div>
 
-            <div class="form-group entreprise-group">
-                <label>Nom de l’entreprise (pilote) *</label>
-                <input type="text" placeholder="Name" required>
+            <div class="form-group entreprise-group" id="entreprise-field" style="display: none;">
+                <label>Nom de l'entreprise (pilote) *</label>
+                <input type="text" placeholder="Nom de l'entreprise" id="entreprise-input">
             </div>
 
             <h4>Sécurité du Compte</h4>
@@ -151,6 +151,28 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const piloteRadio = document.getElementById('pilote');
+            const etudiantRadio = document.getElementById('etudiant');
+            const entrepriseField = document.getElementById('entreprise-field');
+            const entrepriseInput = document.getElementById('entreprise-input');
+
+            function toggleEntrepriseField() {
+                if (piloteRadio.checked) {
+                    entrepriseField.style.display = 'block';
+                    entrepriseInput.required = true;
+                } else {
+                    entrepriseField.style.display = 'none';
+                    entrepriseInput.required = false;
+                }
+            }
+
+            piloteRadio.addEventListener('change', toggleEntrepriseField);
+            etudiantRadio.addEventListener('change', toggleEntrepriseField);
+        });
+    </script>
     
 </body>
 </html>
