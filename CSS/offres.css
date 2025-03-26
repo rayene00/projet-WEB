@@ -49,40 +49,53 @@
     gap: 25px;
 }
 
+/* Ajustement du conteneur de l'offre */
 .offre {
     background: #F0F4FA;
     padding: 25px;
     border-radius: 20px;
     display: flex;
-    align-items: center;
+    align-items: center; /* Centre verticalement */
     justify-content: space-between;
-    gap: 20px;
+    gap: 30px;
     box-shadow: 0px 2px 8px rgba(0,0,0,0.08);
 }
 
+/* Style pour les images des logos */
 .offre img {
-    height: 60px;
+    min-height: 60px;
+    max-height: 80px;
     width: auto;
+    object-fit: contain; /* Garde les proportions de l'image */
+    margin-right: 20px; /* Espace constant avec le texte */
 }
 
 .offre-details {
     flex: 1;
+    text-align: left;  /* Ajout de cette ligne */
 }
 
 .offre-details h2 {
     font-size: 20px;
     color: #25324B;
+    margin: 0;
+    font-size: 18px;
+    text-align: left;  /* Ajout de cette ligne */
 }
 
 .offre-details p {
     color: #515B6F;
     margin: 5px 0;
+    color: #666;
+    text-align: left;  /* Ajout de cette ligne */
 }
 
 .tags {
     display: flex;
     gap: 10px;
     margin-top: 8px;
+    margin-top: 10px;
+    justify-content: flex-start;  /* Ajout de cette ligne */
 }
 
 .tag {
@@ -157,4 +170,49 @@
     font-weight: 700;
     margin-bottom: 15px;
     color: #25324B;
+}
+/* PAGINATION */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.page-number,
+.page-nav {
+    background: transparent;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #4B5563;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+.page-number.active {
+    background-color: #00274D;
+    color: white;
+    font-weight: 700;
+    border-radius: 8px;
+}
+
+.page-number:hover:not(.active),
+.page-nav:not(.disabled):hover {
+    background-color: #E5E7EB;
+}
+
+.page-nav.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.ellipsis {
+    color: #6B7280;
+    font-size: 16px;
+    padding: 0 6px;
 }
