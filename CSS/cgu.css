@@ -13,7 +13,7 @@ body {
     padding: 20px;
 }
   
-.navbar {
+/* .navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -25,68 +25,146 @@ body {
     padding: 10px 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     z-index: 1000;
-}
+} */
   
-.logo-container {
+/* .logo-container {
     display: flex;
     align-items: center;
-}
+} */
   
-.logo {
+/* .logo {
     width: 60px;
     height: auto;
     margin-right: 10px;
-}
+} */
   
-.text-wrapper-3 {
+/* .text-wrapper-3 {
     font-family: "Red Hat Display", Helvetica;
     font-weight: 700;
     color: #00274d;
     font-size: 24px;
-}
+} */
   
-.nav-buttons {
+/* .nav-buttons {
     display: flex;
     gap: 10px;
-}
+} */
   
-.rectangle-2, .rectangle-3 {
+/* .rectangle-2, .rectangle-3 {
     padding: 10px 20px;
     border-radius: 20px;
     cursor: pointer;
-}
+} */
   
-.rectangle-2 {
+/* .rectangle-2 {
     background-color: #00274d;
-}
+} */
   
-.rectangle-3 {
+/* .rectangle-3 {
     border: 1px solid #00274d;
-}
+} */
   
-.text-wrapper-2, .text-wrapper {
+/* .text-wrapper-2, .text-wrapper {
     font-family: var(--body-large-regular-font-family);
     font-weight: var(--body-large-regular-font-weight);
     font-size: 14px;
     white-space: nowrap;
-}
+} */
   
-.text-wrapper-2 {
+/* .text-wrapper-2 {
     color: #ffffff;
-}
+} */
   
-.text-wrapper {
+/* .text-wrapper {
     color: #00274d;
-}
+} */
   
-.content {
+/* .content {
     margin-top: 80px; 
 }
-  
+   */
+   header {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    width: 90%;
+    max-width: 1370px;
+    padding: 0px 10px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    height: 70px;
+    width: auto;
+}
+
+.brand-name {
+    font-size: 25px;
+    font-weight: bold;
+    color: #00274D;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.access-recruteur {
+    color: #00274D;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 500;
+    padding-right: 15px;
+    border-right: 1px solid #00274D;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 26px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.inscription {
+    background: #00274D;
+    color: white;
+    border: none;
+}
+.connexion {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 26px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid #00274D;
+    color: #00274D;
+    background: none;
+}
+
 .text-wrapper-4 {
     font-family: "Clash Display Variable-Semibold", Helvetica;
     font-weight: 600;
-    color: #000000;
+    color: #00274D;
     font-size: 32px;
     margin-bottom: 20px;
 }
