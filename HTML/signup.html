@@ -29,61 +29,61 @@
     <div class="container">
         <h2>Inscription</h2>
         <br>
-        <form action="aprèsco.html" method="GET">
+        <form action="../PHP/signup.php" method="POST">
             <div class="form-row">
                 <div class="form-group prenom-group">
                     <label>Prénom *</label>
-                    <input type="text" placeholder="Prénom" required>
+                    <input type="text" name="prenom" placeholder="Prénom" required>
                 </div>
-
+        
                 <div class="form-group nom-group">
                     <label>Nom *</label>
-                    <input type="text" placeholder="Nom" required>
+                    <input type="text" name="nom" placeholder="Nom" required>
                 </div>
             </div>
-
+        
             <div class="form-row">
                 <div class="form-group email-group">
                     <label>Adresse courriel *</label>
-                    <input type="email" placeholder="Mail" required>
+                    <input type="email" name="email" placeholder="Mail" required>
                 </div>
-
+        
                 <div class="form-group telephone-group">
                     <label>Téléphone (optionnel)</label>
-                    <input type="tel" placeholder="Téléphone">
+                    <input type="tel" name="telephone" placeholder="Téléphone">
                 </div>
             </div>
-
+        
             <div class="form-group role-group">
                 <label>Vous êtes *</label>
                 <div class="checkbox-group">
-                    <input type="radio" id="pilote" name="role" required>
+                    <input type="radio" id="pilote" name="role" value="Pilote" required>
                     <label for="pilote">Pilote</label>
-
-                    <input type="radio" id="etudiant" name="role" required>
+        
+                    <input type="radio" id="etudiant" name="role" value="Etudiant" required>
                     <label for="etudiant">Étudiant</label>
                 </div>
             </div>
-
+        
             <div class="form-group entreprise-group" id="entreprise-field" style="display: none;">
                 <label>Nom de l'entreprise (pilote) *</label>
-                <input type="text" placeholder="Nom de l'entreprise" id="entreprise-input">
+                <input type="text" name="entreprise" placeholder="Nom de l'entreprise" id="entreprise-input">
             </div>
-
+        
             <h4>Sécurité du Compte</h4>
-
+        
             <div class="form-row">
                 <div class="form-group password-group">
                     <label>Mot de passe *</label>
-                    <input type="password" placeholder="Password" required>
+                    <input type="password" name="password" placeholder="Password" required>
                 </div>
-
+        
                 <div class="form-group confirm-password-group">
                     <label>Confirmer le mot de passe *</label>
-                    <input type="password" placeholder="Password" required>
+                    <input type="password" name="confirm_password" placeholder="Password" required>
                 </div>
             </div>
-
+        
             <div class="form-group-terms-group-checkbox-group">
                 <div>
                     <input type="checkbox" id="terms" required>
@@ -91,11 +91,13 @@
                 </div>
                 <a href="cgu.html" class="terms-link">Read our T&Cs</a>
             </div>
-                        
+                            
+            <input type="hidden" name="redirect" value="profile.html">
             <button type="submit" class="btn">Inscription</button>
-
+        
             <p class="login-link">Déjà enregistré chez nous ? <a href="signin.html">Se connecter</a> ou réinitialiser le mot de passe</p>
         </form>
+        
     </div>
 
     <!-- FOOTER (Identique à firstpage) -->
