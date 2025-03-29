@@ -137,6 +137,7 @@ header {
     color: white;
     margin-bottom: 30px;
     font-size: 24px;
+    text-align: left;
 }
 
 /* Style des cartes */
@@ -204,6 +205,19 @@ header {
 
 .btn.avis-btn:hover {
     background: #003366;
+}
+
+/* No Results */
+.no-results {
+    text-align: left;
+    padding: 0 0 40px 0;  /* Suppression du padding horizontal */
+}
+
+.no-results p {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-family: 'Epilogue', sans-serif;
+    margin: 0;  /* Suppression de la marge du bas */
 }
 
 /* FOOTER */

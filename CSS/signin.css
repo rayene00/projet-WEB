@@ -1,15 +1,11 @@
-/* Importation du CSS global */
 @import url("../css/firstpage.css");
 
-/* Variables */
 :root {
     --text-primary: #1E1E1E;
     --text-secondary: #B3B3B3;
     --link-color: #0A65CC;
     --brand-blue: #0090C1;
     --dark-blue: #00274D;
-    --facebook-blue: #4285F4;
-    --linkedin-blue: #0A66C2;
     --border-default: #D9D9D9;
     --shadow: rgba(0, 0, 0, 0.1);
 }
@@ -30,19 +26,19 @@ header {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 20px; /* ✅ Corrigé pour inclure padding latéral */
+    padding: 20px;
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: white; /* ✅ Corrigé pour avoir fond blanc comme le 1er */
+    background: white;
     width: 90%;
     max-width: 1370px;
-    padding: 0px 10px; /* ✅ Match exact du 1er */
+    padding: 0 10px;
     border-radius: 20px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* ✅ Hard-coded pour éviter les soucis avec var(--shadow) */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .logo-section {
@@ -57,9 +53,9 @@ header {
 }
 
 .brand-name {
-    font-size: 25px; /* ✅ Corrigé */
+    font-size: 25px;
     font-weight: bold;
-    color: #00274D; /* ✅ En dur comme le 1er */
+    color: #00274D;
     font-family: 'Red Hat Display', sans-serif;
 }
 
@@ -70,8 +66,8 @@ nav {
 }
 
 .btn {
-    padding: 10px 20px; /* ✅ Corrigé */
-    border-radius: 26px; /* ✅ Corrigé */
+    padding: 10px 20px;
+    border-radius: 26px;
     font-size: 16px;
     font-weight: 500;
     font-family: 'Epilogue', sans-serif;
@@ -79,13 +75,11 @@ nav {
     border: none;
 }
 
-/* Bouton Inscription */
 .inscription {
     background: #00274D;
     color: white;
 }
 
-/* Bouton Connexion */
 .connexion {
     display: inline-block;
     text-align: center;
@@ -105,7 +99,7 @@ nav {
     color: white;
 }
 
-/* Container */
+/* Conteneur */
 .container {
     background: white;
     padding: 30px;
@@ -121,7 +115,19 @@ nav {
 .container h2 {
     font-size: 24px;
     font-weight: 600;
-    line-height: 28.8px;
+}
+
+/* Message d'erreur / succès */
+.form-message {
+    color: #000;
+    background-color: #f2f2f2;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 15px 0 10px;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Epilogue', sans-serif;
 }
 
 /* Formulaire */
@@ -139,7 +145,6 @@ form {
 
 .form-group label {
     font-size: 16px;
-    line-height: 22.4px;
     margin-bottom: 6px;
 }
 
@@ -167,61 +172,7 @@ input::placeholder {
     text-decoration: underline;
 }
 
-/* RECAPTCHA */
-.recaptcha {
-    background: #FAFAFA;
-    border: 1px solid #D6D6D6;
-    border-radius: 2px;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.10);
-    padding: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    color: black;
-}
-
-.checkbox-area {
-    width: 24px;
-    height: 24px;
-    background: white;
-    border: 2px solid #C1C1C1;
-    border-radius: 2px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-/* Spinner + Check */
-.spinner {
-    border: 2px solid #000000;
-    border-top: 2px solid #4285F4;
-    border-radius: 50%;
-    width: 16px;
-    height: 16px;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-.check-icon {
-    color: green;
-    font-size: 16px;
-}
-
-.hidden {
-    display: none;
-}
-
-/* Submit */
+/* Bouton submit */
 .submit {
     background: var(--brand-blue);
     color: white;
@@ -231,7 +182,7 @@ input::placeholder {
     margin-top: 10px;
 }
 
-/* Register */
+/* Lien vers inscription */
 .register-link {
     font-size: 16px;
     color: var(--text-primary);
@@ -248,7 +199,7 @@ input::placeholder {
     text-decoration: underline;
 }
 
-/* FOOTER - FIXED & FULL WIDTH */
+/* FOOTER */
 footer {
     width: 100%;
     background-color: #00274D;
@@ -326,7 +277,7 @@ footer {
 .newsletter input {
     flex: 1;
     padding: 10px;
-    border-radius: 26px;  /* Modifié de 5px à 26px pour matcher les autres inputs */
+    border-radius: 26px;
     border: none;
 }
 
@@ -335,7 +286,7 @@ footer {
     background: #00274D;
     color: white;
     border: none;
-    border-radius: 26px;  /* Modifié de 5px à 26px pour matcher les autres boutons */
+    border-radius: 26px;
     cursor: pointer;
 }
 
@@ -360,7 +311,7 @@ footer {
     text-decoration: none;
 }
 
-/* Mobile */
+/* Responsive */
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;

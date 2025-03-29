@@ -1,6 +1,12 @@
 /* Importation du CSS global */
 @import url("../css/firstpage.css");
 
+/* Suppression de tous les effets visuels */
+* {
+    animation: none !important;
+    transition: none !important;
+}
+
 /* Barre de recherche */
 .search-bar-container {
     margin-top: 20px;
@@ -53,6 +59,29 @@
     margin: 50px auto;
 }
 
+/* Messages (succès / erreur) */
+.form-message {
+    color: #000000;
+    margin: 15px 0;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Epilogue', sans-serif;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+/* Style des liens dans les messages (ex: "vous connecter") */
+.form-message a {
+    color: #00274D;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.form-message a:hover {
+    text-decoration: underline;
+}
+
 /* Formulaire */
 form {
     display: flex;
@@ -76,7 +105,7 @@ form {
 /* Groupes spécifiques */
 .prenom-group, .nom-group, .email-group, .telephone-group, 
 .role-group, .entreprise-group, .password-group, .confirm-password-group {
-    margin-bottom: 10px; /* Espacement entre chaque champ */
+    margin-bottom: 10px;
 }
 
 /* Inputs */
@@ -121,20 +150,18 @@ header {
     padding: 20px;
 }
 
-/* Conteneur principal du header */
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: white;
-    width: 90%; /* Largeur ajustée */
-    max-width: 1370px; /* Réduction de la largeur max */
-    padding: 0px 10px; /* Réduction du padding vertical */
-    border-radius: 20px; /* Réduction de l’arrondi */
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Ombre plus fine */
+    width: 90%;
+    max-width: 1370px;
+    padding: 0px 10px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Section logo + nom */
 .logo-section {
     display: flex;
     align-items: center;
@@ -142,12 +169,12 @@ header {
 }
 
 .logo {
-    height: 70px; /* Augmente la taille du logo */
+    height: 70px;
     width: auto;
 }
 
 .brand-name {
-    font-size: 25px; /* Augmente la taille du texte CRYF */
+    font-size: 25px;
     font-weight: bold;
     color: #00274D;
     font-family: 'Red Hat Display', sans-serif;
@@ -160,7 +187,6 @@ nav {
     gap: 20px;
 }
 
-/* Style du lien Accès Recruteur */
 .access-recruteur {
     color: #00274D;
     font-size: 16px;
@@ -170,7 +196,6 @@ nav {
     border-right: 1px solid #00274D;
 }
 
-/* Boutons */
 .btn {
     padding: 10px 20px;
     border-radius: 26px;
@@ -186,9 +211,9 @@ nav {
     border: none;
 }
 
-/* Bouton Connexion en lien */
+/* Bouton Connexion */
 .connexion {
-    display: inline-block; /* Permet de garder l'apparence d'un bouton */
+    display: inline-block;
     text-align: center;
     text-decoration: none;
     padding: 10px 20px;
@@ -199,6 +224,11 @@ nav {
     border: 1px solid #00274D;
     color: #00274D;
     background: none;
+}
+
+.login-link {
+    color: black;
+    font-weight: normal;
 }
 
 .login-link a {
@@ -218,7 +248,7 @@ h2 {
 }
 
 h3 {
-    color: rgb(255, 255, 255);
+    color: white;
     font-weight: normal;
 }
 
@@ -227,17 +257,11 @@ h4 {
     font-weight: normal;
 }
 
-
 /* Responsive */
 @media (max-width: 600px) {
     .form-row {
         flex-direction: column;
     }
-}
-
-.login-link {
-    color: black;
-    font-weight: normal;
 }
 
 .form-group-terms-group-checkbox-group {
@@ -258,4 +282,102 @@ h4 {
     margin-left: 25px;
     color: #0090C1;
     text-decoration: none;
+}
+
+/* Styles du footer */
+footer {
+    background: linear-gradient(90deg, #00274D 0%, black 50%, #0090C1 100%);
+    padding: 50px 10%;
+    color: white;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo img {
+    height: 50px;
+}
+
+.footer-section h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-alertes {
+    max-width: 300px;
+}
+
+.newsletter {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.newsletter input {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    width: 200px;
+}
+
+.newsletter .btn {
+    background: #00274D;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+.social-icons a {
+    color: rgba(255,255,255,0.8);
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
 }

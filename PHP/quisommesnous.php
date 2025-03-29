@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,19 +12,18 @@
     <link rel="stylesheet" href="../CSS/quisommesnous.css">
 </head>
 <body>
-    <!-- HEADER (superposé sur les images) -->
-      <!-- HEADER -->
-      <header>
+    <!-- HEADER -->
+    <header>
         <div class="header-container">
             <div class="logo-section">
-                <a href="firstpage.html">
+                <a href="firstpage.php">
                     <img src="../assets/images/logo.png" alt="CRYF Logo" class="logo">
                     <span class="brand-name">CRYF</span>
                 </a>
             </div>
             <nav>
-                <a href="signup.html" class="btn inscription">Inscription</a>
-                <a href="signin.html" class="btn connexion">Se connecter</a>
+                <a href="signup.php" class="btn inscription">Inscription</a>
+                <a href="signin.php" class="btn connexion">Se connecter</a>
             </nav>
         </div>
     </header>
@@ -52,38 +55,34 @@
         </div>
     </section>
 
-    <!-- FOOTER (Identique à celui fourni) -->
+    <!-- FOOTER -->
     <footer>
         <div class="footer-container">
-            <!-- Logo et nom -->
             <div class="footer-logo">
-                <a href="firstpage.html">
+                <a href="firstpage.php">
                     <img src="../assets/images/logo.png" alt="CRYF Logo">
                 </a>
                 <span class="brand-name">CRYF</span>
             </div>
     
-            <!-- Section A propos -->
             <div class="footer-section">
                 <h3>A propos</h3>
                 <ul>
-                    <li><a href="../HTML/quisommesnous.html">Qui sommes-nous ?</a></li>
-                    <li><a href="#">Avis</a></li>                    
-                    <li><a href="../HTML/mentions.html">Mentions légales</a></li>
+                    <li><a href="quisommesnous.php">Qui sommes-nous ?</a></li>
+                    <li><a href="avis.php">Avis</a></li>                    
+                    <li><a href="mentions.php">Mentions légales</a></li>
                 </ul>
             </div>
     
-            <!-- Section Liens utiles -->
             <div class="footer-section">
                 <h3>Liens utiles</h3>
                 <ul>
-                    <li><a href="../HTML/offres.html">Offre de stage</a></li>
-                   <li><a href="../HTML/cgu.html">Conditions d'Utilisations</a></li>
-                    <li><a href="../HTML/contact.html">Contact</a></li>
+                    <li><a href="offres.php">Offre de stage</a></li>
+                    <li><a href="cgu.php">Conditions d'Utilisations</a></li>
+                    <li><a href="contact.php">Contact</a></li>
                 </ul>
             </div>
     
-            <!-- Section Alerte de stages -->
             <div class="footer-alertes">
                 <h3>Alertes de stages</h3>
                 <p>Les dernières offres de stages envoyées par mail chaque semaine.</p>
@@ -94,7 +93,6 @@
             </div>
         </div>
     
-        <!-- Ligne de séparation -->
         <div class="footer-bottom">
             <p>2025 @ CRYF. All rights reserved.</p>
             <div class="social-icons">

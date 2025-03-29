@@ -51,76 +51,80 @@
 
 /* Ajustement du conteneur de l'offre */
 .offre {
-    background: #F0F4FA;
-    padding: 25px;
-    border-radius: 20px;
     display: flex;
-    align-items: center; /* Centre verticalement */
-    justify-content: space-between;
-    gap: 30px;
-    box-shadow: 0px 2px 8px rgba(0,0,0,0.08);
+    align-items: center;
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    gap: 20px;
 }
 
-/* Style pour les images des logos */
-.offre img {
-    min-height: 60px;
-    max-height: 80px;
-    width: auto;
-    object-fit: contain; /* Garde les proportions de l'image */
-    margin-right: 20px; /* Espace constant avec le texte */
+.offre-logo {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    min-height: 80px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
 }
 
+/* Style pour assurer que les logos restent proportionnels */
+.entreprise-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Modification de l'alignement du titre et des détails de l'offre */
 .offre-details {
     flex: 1;
-    text-align: left;  /* Ajout de cette ligne */
+    text-align: left;
 }
 
-.offre-details h2 {
-    font-size: 20px;
-    color: #25324B;
-    margin: 0;
+.offre h2 {
     font-size: 18px;
-    text-align: left;  /* Ajout de cette ligne */
+    color: #00274D;
+    margin: 0 0 8px 0;
+    text-align: left;
 }
 
-.offre-details p {
+.entreprise-info {
     color: #515B6F;
-    margin: 5px 0;
-    color: #666;
-    text-align: left;  /* Ajout de cette ligne */
+    margin-bottom: 10px;
+    text-align: left;
 }
 
+/* Ajustement de la disposition des tags */
 .tags {
     display: flex;
     gap: 10px;
-    margin-top: 8px;
-    margin-top: 10px;
-    justify-content: flex-start;  /* Ajout de cette ligne */
+    justify-content: flex-start;
 }
 
 .tag {
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 600;
+    background: #F0F2F5;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+    color: #515B6F;
 }
 
-.green { background: rgba(86, 205, 173, 0.1); color: #56CDAD; }
-.yellow { background: rgba(255, 184, 54, 0.1); color: #FFB836; }
-.purple { background: rgba(70, 64, 222, 0.1); color: #4640DE; }
-
-.postuler {
+.btn.postuler {
     background: #00274D;
     color: white;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 30px;
-    font-size: 15px;
-    cursor: pointer;
-}
-
-.postuler:hover {
-    background: #003366;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
 }
 
 .checkbox-wrapper {

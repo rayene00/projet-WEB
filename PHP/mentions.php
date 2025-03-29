@@ -1,3 +1,6 @@
+<?php
+// mentions-legales.php
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,15 +15,15 @@
   <header>
     <div class="header-container">
       <div class="logo-section">
-        <a href="firstpage.html">
+        <a href="firstpage.php">
           <img src="../assets/images/logo.png" alt="CRYF Logo" class="logo">
         </a>
         <span class="brand-name">CRYF</span>
       </div>
       <nav>
-        <a href="#" class="access-recruteur">Accès Recruteur ></a>
-        <a href="signup.html" class="btn inscription">Inscription</a>
-        <a href="signin.html" class="btn connexion">Se connecter</a>
+        <a href="recruteur.php" class="access-recruteur">Accès Recruteur ></a>
+        <a href="signup.php" class="btn inscription">Inscription</a>
+        <a href="signin.php" class="btn connexion">Se connecter</a>
       </nav>
     </div>
   </header>
@@ -111,35 +114,35 @@
   <footer>
     <div class="footer-container">
       <div class="footer-logo">
-        <a href="firstpage.html"><img src="../assets/images/logo.png" alt="CRYF Logo"></a>
+        <a href="firstpage.php"><img src="../assets/images/logo.png" alt="CRYF Logo"></a>
         <span class="brand-name">CRYF</span>
       </div>
 
       <div class="footer-section">
         <h3>A propos</h3>
         <ul>
-          <li><a href="quisommesnous.html">Qui sommes-nous ?</a></li>
-          <li><a href="#">Avis</a></li>
-          <li><a href="../HTML/mentions.html">Mentions légales</a></li>
+          <li><a href="quisommesnous.php">Qui sommes-nous ?</a></li>
+          <li><a href="avis.php">Avis</a></li>
+          <li><a href="mentions.php">Mentions légales</a></li>
         </ul>
       </div>
 
       <div class="footer-section">
         <h3>Liens utiles</h3>
         <ul>
-          <li><a href="cgu.html">Conditions d'Utilisations</a></li>
-          <li><a href="offres.html">Offre de stage</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cgu.php">Conditions d'Utilisations</a></li>
+          <li><a href="offres.php">Offre de stage</a></li>
+          <li><a href="contact.php">Contact</a></li>
         </ul>
       </div>
 
       <div class="footer-alertes">
         <h3>Alertes de stages</h3>
         <p>Les dernières offres de stages envoyées par mail chaque semaine.</p>
-        <div class="newsletter">
-          <input type="email" placeholder="exemple@xxx.com">
-          <button class="btn">Inscription</button>
-        </div>
+        <form action="newsletter.php" method="POST" class="newsletter">
+          <input type="email" name="email" placeholder="exemple@xxx.com" required>
+          <button type="submit" class="btn">Inscription</button>
+        </form>
       </div>
     </div>
 

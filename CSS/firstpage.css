@@ -8,37 +8,33 @@
     font-family: 'Epilogue', sans-serif;
 }
 
-/* Background fix */
+/* BACKGROUND */
 body {
     background: linear-gradient(90deg, #0090C1 0%, black 50%, #00274D 100%);
     color: white;
     text-align: center;
     min-height: 100vh;
-    margin: 0;
-    padding: 0;
 }
 
-/* HEADER */
+/* ========== HEADER ========== */
 header {
     display: flex;
     justify-content: center;
     padding: 20px;
 }
 
-/* Conteneur principal du header */
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: white;
-    width: 90%; /* Largeur ajustée */
-    max-width: 1370px; /* Réduction de la largeur max */
-    padding: 0px 10px; /* Réduction du padding vertical */
-    border-radius: 20px; /* Réduction de l’arrondi */
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Ombre plus fine */
+    width: 90%;
+    max-width: 1370px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Section logo + nom */
 .logo-section {
     display: flex;
     align-items: center;
@@ -46,15 +42,14 @@ header {
 }
 
 .logo {
-    height: 70px; /* Augmente la taille du logo */
+    height: 70px;
     width: auto;
 }
 
 .brand-name {
-    font-size: 25px; /* Augmente la taille du texte CRYF */
+    font-size: 25px;
     font-weight: bold;
     color: #00274D;
-    font-family: 'Red Hat Display', sans-serif;
 }
 
 /* Navigation */
@@ -64,7 +59,6 @@ nav {
     gap: 20px;
 }
 
-/* Style du lien Accès Recruteur */
 .access-recruteur {
     color: #00274D;
     font-size: 16px;
@@ -74,7 +68,6 @@ nav {
     border-right: 1px solid #00274D;
 }
 
-/* Boutons */
 .btn {
     padding: 10px 20px;
     border-radius: 26px;
@@ -83,36 +76,32 @@ nav {
     cursor: pointer;
 }
 
-/* Bouton Inscription */
+/* Boutons spécifiques */
 .inscription {
     background: #00274D;
     color: white;
     border: none;
 }
 
-/* Bouton Connexion en lien */
 .connexion {
-    display: inline-block; /* Permet de garder l'apparence d'un bouton */
     text-align: center;
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 26px;
     font-size: 16px;
     font-weight: 500;
-    cursor: pointer;
     border: 1px solid #00274D;
     color: #00274D;
     background: none;
 }
 
-/* HERO SECTION */
+/* ========== HERO SECTION ========== */
 .hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 50vh;
-    text-align: center;
 }
 
 .hero h1 {
@@ -126,8 +115,16 @@ nav {
     text-decoration: underline;
 }
 
-/* SEARCH BAR */
-.search-bar {
+/* ========== SEARCH BAR ========== */
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.search-bar, .search-bar-student {
     display: flex;
     background: white;
     padding: 15px;
@@ -135,35 +132,48 @@ nav {
     gap: 12px;
 }
 
-.search-input {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: white;
+.search-bar input, .search-bar-student input {
+    padding: 12px;
+    border-radius: 25px;
     border: 1px solid #00274D;
-    padding: 10px 15px;
-    border-radius: 20px;
-}
-
-.search-input input {
-    border: none;
     outline: none;
+    width: 200px;
     font-size: 16px;
     color: #00274D;
-    background: none;
+    background: white;
+    text-align: center;
 }
 
 .rechercher {
     background: #0090C1;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
+    padding: 12px 20px;
+    border-radius: 25px;
     font-size: 16px;
     cursor: pointer;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
-/* PARTENAIRES */
+.rechercher:hover {
+    background: #007aa3;
+}
+
+.rechercher:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+.rechercher:active {
+    border: none;
+    outline: none;
+}
+
+/* ========== PARTENAIRES ========== */
 .partenaires {
     margin-top: 50px;
     text-align: center;
@@ -173,13 +183,12 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 120px; /* Espacement entre les logos */
+    gap: 120px;
     flex-wrap: wrap;
 }
 
 .logos img {
     height: 120px;
-    width: auto;
     max-width: 220px;
     object-fit: contain;
     transition: transform 0.3s ease-in-out;
@@ -189,7 +198,7 @@ nav {
     transform: scale(1.1);
 }
 
-/* FOOTER */
+/* ========== FOOTER ========== */
 footer {
     background: linear-gradient(90deg, #00274D 0%, black 50%, #0090C1 100%);
     padding: 50px 10%;
@@ -204,43 +213,6 @@ footer {
     flex-wrap: wrap;
 }
 
-/* Conteneur pour aligner les sections à gauche */
-.footer-left {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 30px; /* Espacement entre les blocs */
-}
-
-/* Sections du footer (A propos & Liens utiles) */
-.footer-section {
-    text-align: left; /* Texte bien aligné à gauche */
-    color: white;
-}
-
-/* Espacement entre les éléments */
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section ul li {
-    margin-bottom: 10px;
-}
-
-.footer-section ul li a {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 16px;
-}
-
-/* Alertes de stages reste à droite */
-.footer-alertes {
-    text-align: left;
-    max-width: 300px;
-}
-
-/* Style du logo */
 .footer-logo {
     display: flex;
     align-items: center;
@@ -248,30 +220,31 @@ footer {
 }
 
 .footer-logo img {
-    height: 80px; /* Augmente la taille du logo */
+    height: 80px;
     width: auto;
 }
 
 .footer-logo .brand-name {
     font-size: 30px;
     font-weight: bold;
-    color: white;
 }
 
 /* Sections du footer */
-.footer-section h3,
-.footer-alertes h3 {
+.footer-section, .footer-alertes {
+    text-align: left;
+}
+
+.footer-section h3, .footer-alertes h3 {
     font-size: 18px;
     margin-bottom: 15px;
 }
 
 .footer-section ul {
     list-style: none;
-    padding: 0;
 }
 
 .footer-section ul li {
-    margin-bottom: 12px; /* Ajoute plus d’espace entre les éléments */
+    margin-bottom: 12px;
 }
 
 .footer-section ul li a {
@@ -295,7 +268,6 @@ footer {
     width: 200px;
 }
 
-/* Bouton Inscription */
 .newsletter .btn {
     background: #00274D;
     color: white;
@@ -327,7 +299,7 @@ footer {
     text-decoration: none;
 }
 
-/* Responsive */
+/* ========== RESPONSIVE DESIGN ========== */
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
@@ -335,8 +307,7 @@ footer {
         align-items: center;
     }
 
-    .footer-section,
-    .footer-alertes {
+    .footer-section, .footer-alertes {
         margin-top: 20px;
     }
 
@@ -344,38 +315,31 @@ footer {
         flex-direction: column;
         text-align: center;
     }
+
+    .search-bar, .search-bar-student {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .search-bar input, .search-bar-student input {
+        width: 100%;
+    }
 }
 
-/* SEARCH BAR */
-.search-bar {
-    display: flex;
-    background: white;
-    padding: 15px;
-    border-radius: 30px;
-    gap: 12px;
-    align-items: center;
+.search-bar-student {
+    background: transparent;
+    padding: 0;
 }
 
-/* Style des inputs */
-.search-bar input {
-    padding: 12px;
-    border-radius: 25px; /* Rend les bords bien arrondis */
-    border: 1px solid #00274D;
-    outline: none;
-    width: 200px;
-    font-size: 16px;
-    color: #00274D;
-    background: white;
-    text-align: center;
-}
-
-/* Style du bouton Rechercher */
-.rechercher {
+.search-bar-student .rechercher {
     background: #0090C1;
     color: white;
     border: none;
-    padding: 12px 20px;
-    border-radius: 25px; /* Arrondi le bouton aussi */
+    padding: 12px 30px;
+    border-radius: 30px;
     font-size: 16px;
+    font-weight: 500;
     cursor: pointer;
+    box-shadow: none;
 }

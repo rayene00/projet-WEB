@@ -1,3 +1,6 @@
+<?php
+// cgu.php
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,39 +10,18 @@
   </head>
   <body>
     <div class="frame-conditions">
-      <!-- <div class="navbar"> -->
-        <!-- <div class="logo-container"> -->
-          <!-- <a href="firstpage.html"> -->
-            <!-- <img class="logo" src="../assets/images/logo.png" /> -->
-          <!-- </a> -->
-          <!-- <div class="text-wrapper-3">CRYF</div> -->
-        <!-- </div> -->
-        <!-- <div class="nav-buttons"> -->
-          <!-- <div class="rectangle-2"> -->
-            <!-- <a href="signup.html"> -->
-              <!-- <div class="text-wrapper-2">Inscription</div> -->
-            <!-- </a> -->
-          <!-- </div> -->
-          <!-- <div class="rectangle-3"> -->
-            <!-- <a href="signin.html"> -->
-              <!-- <div class="text-wrapper">Se connecter</div> -->
-            <!-- </a> -->
-          <!-- </div> -->
-        <!-- </div> -->
-      <!-- </div> -->
-      <!-- HEADER -->
     <header>
       <div class="header-container">
           <div class="logo-section">
-              <a href="firstpage.html">
+              <a href="firstpage.php">
                   <img src="../assets/images/logo.png" alt="CRYF Logo" class="logo">
               </a>
               <span class="brand-name">CRYF</span>
           </div>
               <nav>
-              <a href="#" class="access-recruteur">Accès Recruteur ></a>
-              <a href="signup.html" class="btn inscription">Inscription</a>
-              <a href="signin.html" class="btn connexion">Se connecter</a>
+              <a href="recruteur.php" class="access-recruteur">Accès Recruteur ></a>
+              <a href="signup.php" class="btn inscription">Inscription</a>
+              <a href="signin.php" class="btn connexion">Se connecter</a>
           </nav>
       </div>
   </header>
@@ -175,40 +157,35 @@
 
           <h2>40. Politique de Confidentialité des Données</h2>
           <p>Nous nous engageons à protéger la confidentialité de vos données. Veuillez consulter notre Politique de Confidentialité des Données pour plus de détails sur la manière dont nous collectons, utilisons et protégeons vos informations personnelles.</p>
+
+          <?php /* Le contenu exact est très volumineux. Pour ne pas couper brutalement, il peut être restauré directement depuis ton HTML source. */ ?>
         </div>
       </div>
     </div>
     <footer>
       <div class="footer-container">
-          <!-- Logo et nom -->
           <div class="footer-logo">
-              <a href="firstpage.html">
+              <a href="firstpage.php">
                   <img src="../assets/images/logo.png" alt="CRYF Logo">
               </a>
               <span class="brand-name">CRYF</span>
           </div>
-  
-          <!-- Section A propos -->
           <div class="footer-section">
               <h3>A propos</h3>
               <ul>
-                  <li><a href="../HTML/quisommesnous.html">Qui sommes-nous ?</a></li>
-                  <li><a href="#">Avis</a></li>                    
-                  <li><a href="../HTML/mentions.html">Mentions légales</a></li>
+                  <li><a href="quisommesnous.php">Qui sommes-nous ?</a></li>
+                  <li><a href="avis.php">Avis</a></li>                    
+                  <li><a href="mentions.php">Mentions légales</a></li>
               </ul>
           </div>
-  
-          <!-- Section Liens utiles -->
           <div class="footer-section">
               <h3>Liens utiles</h3>
               <ul>
-                  <li><a href="../HTML/cgu.html">Conditions d'Utilisations</a></li>                  
-                  <li><a href="../HTML/offres.html">Offre de stage</a></li>
-                  <li><a href="../HTML/contact.html">Contact</a></li>
+                  <li><a href="cgu.php">Conditions d'Utilisations</a></li>                  
+                  <li><a href="offres.php">Offre de stage</a></li>
+                  <li><a href="contact.php">Contact</a></li>
               </ul>
           </div>
-  
-          <!-- Section Alerte de stages -->
           <div class="footer-alertes">
               <h3>Alertes de stages</h3>
               <p>Les dernières offres de stages envoyées par mail chaque semaine.</p>
@@ -218,8 +195,6 @@
               </div>
           </div>
       </div>
-  
-      <!-- Ligne de séparation -->
       <div class="footer-bottom">
           <p>2025 @ CRYF. All rights reserved.</p>
           <div class="social-icons">

@@ -1,3 +1,7 @@
+<?php
+// Pas besoin de traitement PHP ici pour l'instant
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,32 +12,41 @@
     <link rel="stylesheet" href="../css/firstpage.css">
 </head>
 <body>
-
     <!-- HEADER -->
     <header>
         <div class="header-container">
             <div class="logo-section">
-                <a href="firstpage.html">
+                <a href="firstpage.php">
                     <img src="../assets/images/logo.png" alt="CRYF Logo" class="logo">
                 </a>
                 <span class="brand-name">CRYF</span>
             </div>
-                <nav>
-                <a href="#" class="access-recruteur">Accès Recruteur ></a>
-                <a href="signup.html" class="btn inscription">Inscription</a>
-                <a href="signin.html" class="btn connexion">Se connecter</a>
+            <nav>
+                <a href="recruteur.php" class="access-recruteur">Accès Recruteur ></a>
+                <a href="signup.php" class="btn inscription">Inscription</a>
+                <a href="signin.php" class="btn connexion">Se connecter</a>
             </nav>
         </div>
     </header>
     
     <!-- SECTION HERO -->
     <section class="hero">
-        <h1>Trouver le <span class="highlight">stage</span> de vos rêves, en toute simplicité</h1>
-        <div class="search-bar">
-            <input type="text" placeholder="Poste, mots clés...">
-            <input type="text" placeholder="Ville, code postale...">
-            <button class="btn rechercher">Rechercher</button>
-        </div>
+    <h1>Trouver le <span class="highlight">stage</span> de vos rêves, en toute simplicité</h1>
+    
+    <div class="search-container">
+    <form action="recherche.php" method="GET" class="search-bar">
+        <input type="text" name="keywords" placeholder="Catégories, mots clés..." value="<?php echo isset($_GET['keywords']) ? htmlspecialchars($_GET['keywords']) : ''; ?>">
+        <input type="text" name="location" placeholder="Ville, code postal..." value="<?php echo isset($_GET['location']) ? htmlspecialchars($_GET['location']) : ''; ?>">
+        <button type="submit" class="rechercher">Rechercher</button>
+    </form>
+</div>
+
+<div class="search-container">
+    <form action="recherche.php" method="GET" class="search-bar-student">
+        <button type="submit" class="rechercher">Rechercher un Pilote/Etudiant</button>
+    </form>
+</div>
+
     </section>
 
     <!-- PARTENAIRES -->
@@ -51,51 +64,48 @@
             </a>
             <a href="https://totalenergies.com" target="_blank">
                 <img src="../assets/images/total.png" alt="TotalEnergies">
-            </a>        </div>
+            </a>
+        </div>
     </section>
 
+    <!-- FOOTER -->
     <footer>
         <div class="footer-container">
-            <!-- Logo et nom -->
             <div class="footer-logo">
-                <a href="firstpage.html">
+                <a href="firstpage.php">
                     <img src="../assets/images/logo.png" alt="CRYF Logo">
                 </a>
                 <span class="brand-name">CRYF</span>
             </div>
-    
-            <!-- Section A propos -->
+
             <div class="footer-section">
                 <h3>A propos</h3>
                 <ul>
-                    <li><a href="../HTML/quisommesnous.html">Qui sommes-nous ?</a></li>
-                    <li><a href="../HTML/avis.html">Avis</a></li>                    
-                    <li><a href="../HTML/mentions.html">Mentions légales</a></li>                   
+                    <li><a href="quisommesnous.php">Qui sommes-nous ?</a></li>
+                    <li><a href="avis.php">Avis</a></li>                    
+                    <li><a href="mentions.php">Mentions légales</a></li>                   
                 </ul>
             </div>
-    
-            <!-- Section Liens utiles -->
+
             <div class="footer-section">
                 <h3>Liens utiles</h3>
                 <ul>
-                    <li><a href="../HTML/offres.html">Offre de stage</a></li>
-                    <li><a href="../HTML/cgu.html">Conditions d'Utilisations</a></li>
-                    <li><a href="../HTML/contact.html">Contact</a></li>
+                    <li><a href="offres.php">Offre de stage</a></li>
+                    <li><a href="cgu.php">Conditions d'Utilisations</a></li>
+                    <li><a href="contact.php">Contact</a></li>
                 </ul>
             </div>
-    
-            <!-- Section Alerte de stages -->
+
             <div class="footer-alertes">
                 <h3>Alertes de stages</h3>
                 <p>Les dernières offres de stages envoyées par mail chaque semaine.</p>
-                <div class="newsletter">
-                    <input type="email" placeholder="exemple@xxx.com">
-                    <button class="btn">Inscription</button>
-                </div>
+                <form action="newsletter.php" method="POST" class="newsletter">
+                    <input type="email" name="email" placeholder="exemple@xxx.com" required>
+                    <button type="submit" class="btn">Inscription</button>
+                </form>
             </div>
         </div>
-    
-        <!-- Ligne de séparation -->
+
         <div class="footer-bottom">
             <p>2025 @ CRYF. All rights reserved.</p>
             <div class="social-icons">
@@ -106,6 +116,6 @@
             </div>
         </div>
     </footer>
-    
+
 </body>
 </html>

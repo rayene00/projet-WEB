@@ -28,8 +28,8 @@ header {
     background: white;
     width: 90%;
     max-width: 1370px;
-    padding: 15px 30px;
-    border-radius: 20px;
+    padding: 0px 30px; /* Reduced padding to shrink height */
+    border-radius: 50px; /* Increased border-radius for a more oval shape */
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
@@ -68,93 +68,151 @@ main {
     padding: 20px;
 }
 
-/* Section offre */
+/* Style principal */
+.offre-details {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* En-tête de l'offre */
 .offre-header {
-    margin-bottom: 40px;
-}
-
-.offre-card {
     background: white;
-    padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 35px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
 }
 
-.offre-left {
+.entreprise-info {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 25px;
+    margin-bottom: 30px;
 }
 
-.company-logo {
+.entreprise-logo {
     width: 100px;
-    height: auto;
+    height: 100px;
     object-fit: contain;
+    padding: 10px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-.offre-details h1 {
-    font-size: 24px;
+.entreprise-details h1 {
     color: #25324B;
-    margin-bottom: 10px;
+    font-size: 28px;
+    margin-bottom: 12px;
+    font-weight: 600;
 }
 
-.location {
-    color: #515B6F;
-    margin-bottom: 15px;
+.entreprise-name {
+    color: #666;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.location i {
-    margin-right: 8px;
+/* Tags et métadonnées */
+.offre-meta {
+    border-top: 1px solid #eef1f6;
+    padding-top: 25px;
 }
 
 .tags {
     display: flex;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
 .tag {
-    padding: 6px 12px;
-    border-radius: 20px;
+    background: #f0f4fa;
+    color: #25324B;
+    padding: 10px 16px;
+    border-radius: 25px;
     font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tag i {
+    color: #00274D;
+    width: 16px;
+    text-align: center;
+}
+
+/* Contenu principal */
+.offre-content {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 30px;
+}
+
+/* Description */
+.description {
+    background: white;
+    border-radius: 15px;
+    padding: 35px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.description h2 {
+    color: #25324B;
+    font-size: 22px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eef1f6;
+}
+
+.description-content {
+    color: #444;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+/* Boutons d'action */
+.actions {
+    position: sticky;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn {
+    text-align: center;
+    padding: 14px 25px;
+    border-radius: 26px;
     font-weight: 500;
-}
-
-.tag-blue {
-    background: #E5F0FF;
-    color: #0055CC;
-}
-
-.tag-green {
-    background: #E3FCEF;
-    color: #00875A;
-}
-
-.tag-purple {
-    background: #F3E8FF;
-    color: #6E32C9;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 15px;
 }
 
 .btn.postuler {
     background: #00274D;
     color: white;
-    padding: 12px 30px;
-    border-radius: 26px;
-    border: none;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    box-shadow: 0 4px 12px rgba(0,39,77,0.15);
 }
 
-.btn.postuler:hover {
-    background: #003366;
+.btn.voir-entreprise {
+    background: #f0f4fa;
+    color: #25324B;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(0,39,77,0.2);
 }
 
 /* Description entreprise */
 .company-description {
     background: #F9F9F9;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     padding: 30px;
     border-radius: 15px;
     margin-bottom: 40px;
@@ -270,59 +328,6 @@ main {
 #ratingText {
     color: #515B6F;
     font-weight: 500;
-}
-
-/* Ajout des styles pour le champ de texte */
-.avis-text-container {
-    margin-top: 20px;
-    width: 100%;
-}
-
-textarea {
-    width: 100%;
-    min-height: 120px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 15px;
-    resize: vertical;
-    font-family: 'Epilogue', sans-serif;
-    font-size: 14px;
-    outline: none;
-    transition: border-color 0.3s;
-}
-
-textarea:focus {
-    border-color: #00274D;
-}
-
-.char-count {
-    text-align: right;
-    margin-top: 8px;
-    font-size: 12px;
-    color: #666;
-    transition: color 0.3s;
-}
-
-.btn.submit-avis {
-    margin-top: 20px;
-    background: #00274D;
-    color: white;
-    padding: 12px 30px;
-    border-radius: 26px;
-    border: none;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.btn.submit-avis:hover {
-    background: #003366;
-}
-
-.btn.submit-avis:disabled {
-    background: #cccccc;
-    cursor: not-allowed;
-    opacity: 0.5;
 }
 
 /* FOOTER */
@@ -447,6 +452,21 @@ footer {
 }
 
 /* Styles responsives */
+@media (max-width: 968px) {
+    .offre-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .actions {
+        position: static;
+        margin-top: 20px;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
+
 @media (max-width: 768px) {
     .offre-card {
         flex-direction: column;
@@ -460,6 +480,12 @@ footer {
 
     .tags {
         justify-content: center;
+    }
+
+    .tag {
+        flex: 1;
+        justify-content: center;
+        min-width: 150px;
     }
 
     .avis-container {
