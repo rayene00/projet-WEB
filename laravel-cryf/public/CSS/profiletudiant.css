@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&display=swap');
+
+body {
+    font-family: 'Epilogue', sans-serif;
+    background: #F8F8F8;
+    margin: 0;
+    padding: 0;
+}
+
+.profil-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.profil-container h1 {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 32px;
+    text-align: center;
+    color: #00274D;
+    margin-bottom: 40px;
+}
+
+/* Cards (Infos, Candidatures) */
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px 30px;
+    margin-bottom: 30px;
+    box-shadow: 0px 4px 12px rgba(0, 39, 77, 0.05);
+}
+
+.card h2 {
+    font-size: 20px;
+    color: #00274D;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.card ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.card ul li {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+.card ul li small {
+    color: #888;
+    font-size: 14px;
+}
+
+/* Bouton Voir Offres */
+.profil-actions {
+    text-align: center;
+}
+
+.profil-actions .btn {
+    padding: 12px 28px;
+    background-color: #00274D;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.profil-actions .btn:hover {
+    background-color: #003366;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profil-container {
+        padding: 0 10px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .profil-actions .btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,131 @@
+/* Import du style commun */
+@import url('firstpage.css');
+
+/* Style des résultats */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.results-container {
+    margin-top: 30px;
+}
+
+.results-container h2 {
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 24px;
+}
+
+.stage-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.stage-card h3 {
+    color: #00274D;
+    margin-bottom: 10px;
+}
+
+.entreprise {
+    color: #515B6F;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.location, .categorie {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.description {
+    margin: 15px 0;
+    line-height: 1.5;
+    color: #333;
+}
+
+.duree {
+    color: #515B6F;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.btn.voir-plus {
+    background: #00274D;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.no-results {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.no-results h2 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.no-results p {
+    color: #666;
+}
+
+/* Sections de recherche */
+.search-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* Style pour les cartes utilisateurs */
+.user-card {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.user-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-info {
+    flex: 1;
+}
+
+.user-info h3 {
+    color: #00274D;
+    margin: 0 0 10px 0;
+}
+
+.user-info p {
+    color: #515B6F;
+    margin: 5px 0;
+}
+
+.h2 {
+    color: #ffffff;
+}
